@@ -6,7 +6,10 @@
 </style>
 
 <%= form_tag(developers_path, method: :get, enforce_utf8: false) do %>
-  <%= text_field_tag 'keyword', @keyword, placeholder: 'Enter keyword' %>
+  Programming language:
+  <%= text_field_tag 'programming_language', @programming_language %> <br>
+  Language:
+  <%= text_field_tag 'language', @language %> <br>
   <%= submit_tag 'Search', name: nil %>
 <% end %>
 
