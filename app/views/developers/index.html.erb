@@ -5,6 +5,15 @@
   }
 </style>
 
+<%= form_tag(developers_path, method: :get, enforce_utf8: false) do %>
+  <%= check_box_tag :programming_language_id, @ruby_id, @ruby_id == params[:programming_language_id].to_i %>
+  Can write Ruby <br>
+  <%= check_box_tag :language_id, @english_id, @english_id == params[:language_id].to_i %>
+  Can speak English <br>
+  <%= submit_tag "Search", name: nil %>
+<% end %>
+
+<br><br>
 <table>
   <thead>
     <tr>
