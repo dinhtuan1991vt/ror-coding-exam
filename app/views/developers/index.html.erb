@@ -1,0 +1,25 @@
+<style>
+  table, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+</style>
+
+<table>
+  <thead>
+    <tr>
+      <td>email</td>
+      <td>programming_languages</td>
+      <td>languages</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @developers.each do |developer| %>
+      <tr>
+        <td><%= developer.email %></td>
+        <td><%= developer.programming_language_list %></td>
+        <td><%= developer.language_list %></td>
+      </tr>
+    <%end %>
+  </tbody>
+</table>
