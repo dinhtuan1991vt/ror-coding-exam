@@ -1,7 +1,7 @@
 class SearchDeveloperService
   attr_reader :programming_language_id, :language_id
 
-  def initialize(params)
+  def initialize(params={})
     @relation = Developer.includes(:programming_languages, :languages)
     @programming_language_id = params[:programming_language_id].presence
     @language_id = params[:language_id].presence
