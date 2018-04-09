@@ -1,24 +1,26 @@
-# README
+## Setup
+```
+bundle install
+rails db:create
+rails db:migrate
+rails s
+```
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Rake create dummy records
+```
+rails generate:dummy_data
+```
 
-Things you may want to cover:
+## Unit test
+```
+rspec
+```
 
-* Ruby version
+## System test
+```
+rails test:system
+```
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Links
+- Search developers page: http://localhost:3000
+- API getting developers detail: http://localhost:3000/api/v1/developers.json
