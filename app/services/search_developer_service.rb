@@ -16,12 +16,14 @@ class SearchDeveloperService
   private
 
   def search_with_programming_language
-    @relation = @relation.left_joins(:programming_languages)
-                         .where('programming_languages.name = ?', programming_language)
+    programming_language_list = programming_language.strip.split
+    developer_ids = Developer.joins(:programming_languages).where('programming_languages.name IN (?)', programming_language_list).pluck(:id)
+    @relation = @relation.where(id: developer_ids)
   end
 
   def search_with_language
-    @relation = @relation.left_joins(:languages)
-                         .where('languages.code = ?', language)
+    language_list = language.strip.split
+    developer_ids = Developer.joins(:languages).where('languages.code IN (?)', language_list).pluck(:id)
+    @relation = @relation.where(id: developer_ids)
   end
 end
