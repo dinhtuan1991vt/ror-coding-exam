@@ -1,0 +1,8 @@
+ruby:
+  name: ruby
+
+javascript:
+  name: javascript
+
+python:
+  name: python

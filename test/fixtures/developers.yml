@@ -1,0 +1,12 @@
+test1:
+  email: test1@gmail.com
+  programming_languages: ruby
+  languages: en
+test2:
+  email: test2@gmail.com
+  programming_languages: ruby, javascript
+  languages: vn
+test3:
+  email: test3@gmail.com
+  programming_languages: javascript
+  languages: en
